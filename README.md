@@ -1,6 +1,6 @@
 # Personal Project
 
-Welcome. I am currently a final-year undergraduate student in NUS. This is my repository where I upload all the codes of my past project. If u have any questions, u may contact me through my [personal email](mullianayusuff@gmail.com). 
+Welcome. I am currently a final-year undergraduate student in NUS. This is my repository where I upload all the codes of my past project. If u have any questions, u may contact me through my [personal email](mailto:mullianayusuff@gmail.com). 
 
 The table below is a description of the different project files in this repository.
 
