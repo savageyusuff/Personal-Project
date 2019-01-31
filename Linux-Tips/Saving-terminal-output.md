@@ -122,7 +122,7 @@ And to the end of your .bashrc file add this:
 ```shell
 smart_script
 ```
-After you've done this, "script" command will be executed once in every terminal session, logging everything to '~/Terminal_typescripts/raw'. If you want, you can save current session log after the fact (in the end of the session) by typing 'savelog' or 'savelog logname' - this will copy current raw log to '~/Terminal_typescripts/manual' and also create readable .txt log in this folder. (If you forget to do so, raw log files will still be in their folder, you'll just have to find them.) Also you may start recording to a new log file by typing 'startnewlog'.
+After you've done this, "script" command will be executed once in every terminal session, logging everything to ```~/Terminal_typescripts/raw```. If you want, you can save current session log after the fact (in the end of the session) by typing ```savelog``` or ```savelog logname``` - this will copy current raw log to ```/Terminal_typescripts/manual``` and also create readable ```.txt``` log in this folder. (If you forget to do so, raw log files will still be in their folder, you'll just have to find them.) Also you may start recording to a new log file by typing ```startnewlog```.
 
 There will be a lot of junk log files, but you can clean old ones from time to time, so it's not a big problem.
 
