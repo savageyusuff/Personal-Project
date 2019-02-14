@@ -49,3 +49,21 @@ To activate the environment, type the folowing command: ```workon <env_name>```.
 yusuff@yusuff-VirtualBox:~$ workon cv
 (cv) yusuff@yusuff-VirtualBox:~$
 ```
+
+## Checking what are the virtualenv on your system
+Sometimes managing many virtual environments can be difficult. Here are a few ways to check what are the virtual environments that u have in the system
+
+1) Using ```lsvirtualenv```, in which there are two options "long" or "brief":
+
+"long" option is the default one, it searches for any hook you may have around this command and executes it, which takes more time.
+
+"brief" just take the virtualenvs names and prints it.
+
+brief usage:
+
+```lsvirtualenv -b```
+
+long usage:
+
+```lsvirtualenv -l```
+
