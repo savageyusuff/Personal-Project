@@ -5,3 +5,5 @@ https://medium.com/@zhanwenchen/install-cuda-and-cudnn-for-tensorflow-gpu-on-ubu
 https://stackoverflow.com/questions/9727688/how-to-get-the-cuda-version
 
 https://yangcha.github.io/CUDA90/
+
+https://stackoverflow.com/questions/38009682/how-to-tell-if-tensorflow-is-using-gpu-acceleration-from-inside-python-shell
