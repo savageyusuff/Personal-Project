@@ -1,0 +1,61 @@
+For personal note:
+
+1) Find what required version you need
+- Cuda 10.0 ---> Nvidia driver 410.0 (cannot higher)
+- cuDNN 7.0 ---> must match Cuda version
+
+2) Download nvidia driver
+- use apt-get to install
+- some driver not updated in the repository, must use command:
+- after download must reboot
+- check version using nvida-smi
+
+3) Download Cuda
+- version old, must use archieve
+- if version not old, use apt-get (simpler)
+- follow instrcution
+- do post installtion work: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions ----> put command in ~/.bashrc, make sure file name is consistent
+- check using nvcc -V
+
+4)Install cuDNN
+- Log-In to nvidia account
+- Download file (must check Cuda version), follow instruction
+- Make sure link to library --> https://github.com/tensorflow/tensorflow/issues/20271
+- put command in ~/.bashrc, make sure file name is consistent
+- check using some command : cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+yusuff@yusuff-Z170X-UD3:~/Downloads$ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+#define CUDNN_MAJOR 7
+#define CUDNN_MINOR 6
+#define CUDNN_PATCHLEVEL 0
+--
+#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include "driver_types.h"
+yusuff@yusuff-Z170X-UD3:~/Downloads$ nvcc -V
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2018 NVIDIA Corporation
+Built on Sat_Aug_25_21:08:01_CDT_2018
+Cuda compilation tools, release 10.0, V10.0.130
+yusuff@yusuff-Z170X-UD3:~/Downloads$ nvidia-smi
+Fri Jun 14 15:28:28 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 410.104      Driver Version: 410.104      CUDA Version: 10.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 1070    Off  | 00000000:01:00.0  On |                  N/A |
+|  0%   35C    P8    11W / 180W |    541MiB /  8116MiB |      1%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1144      G   /usr/lib/xorg/Xorg                            24MiB |
+|    0      1179      G   /usr/bin/gnome-shell                          51MiB |
+|    0      1465      G   /usr/lib/xorg/Xorg                           198MiB |
+|    0      1596      G   /usr/bin/gnome-shell                         113MiB |
+|    0      1962      G   ...quest-channel-token=8541471898102943770   149MiB |
++-----------------------------------------------------------------------------+
